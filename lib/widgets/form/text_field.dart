@@ -53,39 +53,42 @@ class TextInputField extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) => Container(
-      child: TextFormField(
-          textAlign: textAlign ?? TextAlign.center,
-          obscureText: isPassword ?? false,
-          textAlignVertical: TextAlignVertical.center,
-          textCapitalization: TextCapitalization.sentences,
-          decoration: InputDecoration(
-            fillColor: fillColor ?? AppColors.white,
-            filled: true,
-            contentPadding: padding,
-            hintText: hintText ?? 'Hint Text',
-            suffixIconConstraints: BoxConstraints(maxHeight: 22),
-            suffixIcon: suffixIcon == null ? SizedBox() : suffixIcon,
-            // labelText: labelText ?? 'Field Label',
-            floatingLabelBehavior: floatingLabelBehavior,
-            // labelStyle: style ?? AppTextStyles.semiBold13,
-            hintStyle: style ?? AppTextStyles.semiBold13,
-            focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: borderColor ?? Colors.transparent, width: 1),
-                borderRadius: BorderRadius.circular(radius ?? 5.0)),
-            enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                    color: borderColor ?? Colors.transparent, width: 1),
-                borderRadius: BorderRadius.circular(radius ?? 5.0)),
-          ),
-          validator: validator ?? null,
-          maxLength: maxLength,
-          onChanged: onChanged,
-          readOnly: readOnly ?? false,
-          inputFormatters: formatters,
-          initialValue: initialValue,
-          maxLines: maxLines,
-          controller: controller,
-          keyboardType: keyboardType ?? TextInputType.text,
-          style: style ?? AppTextStyles.semiBold13));
+          child: Container(
+        height: 40,
+        child: TextFormField(
+            textAlign: textAlign ?? TextAlign.center,
+            obscureText: isPassword ?? false,
+            textAlignVertical: TextAlignVertical.center,
+            textCapitalization: TextCapitalization.sentences,
+            decoration: InputDecoration(
+              fillColor: fillColor ?? AppColors.white,
+              filled: true,
+              contentPadding: padding,
+              hintText: hintText ?? 'Hint Text',
+              suffixIconConstraints: BoxConstraints(maxHeight: 22),
+              suffixIcon: suffixIcon == null ? SizedBox() : suffixIcon,
+              // labelText: labelText ?? 'Field Label',
+              floatingLabelBehavior: floatingLabelBehavior,
+              // labelStyle: style ?? AppTextStyles.semiBold13,
+              hintStyle: style ?? AppTextStyles.semiBold13,
+              focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: borderColor ?? Colors.transparent, width: 1),
+                  borderRadius: BorderRadius.circular(radius ?? 5.0)),
+              enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                      color: borderColor ?? Colors.transparent, width: 1),
+                  borderRadius: BorderRadius.circular(radius ?? 5.0)),
+            ),
+            validator: validator ?? null,
+            maxLength: maxLength,
+            onChanged: onChanged,
+            readOnly: readOnly ?? false,
+            inputFormatters: formatters,
+            initialValue: initialValue,
+            maxLines: maxLines,
+            controller: controller,
+            keyboardType: keyboardType ?? TextInputType.text,
+            style: style ?? AppTextStyles.semiBold13),
+      ));
 }

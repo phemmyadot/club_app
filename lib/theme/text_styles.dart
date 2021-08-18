@@ -10,4 +10,6 @@ class AppTextStyles {
       fontSize: 15, height: 18 / 15, fontWeight: FontWeight.w600);
   static TextStyle get semiBold16 => GoogleFonts.montserrat(
       fontSize: 16, height: 19.2 / 16, fontWeight: FontWeight.w600);
+  static TextStyle get semiBold26 => GoogleFonts.montserrat(
+      fontSize: 26, height: 34 / 26, fontWeight: FontWeight.w600);
 }
