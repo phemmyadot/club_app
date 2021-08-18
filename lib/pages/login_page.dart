@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
-import 'package:la_isla/controllers/authentication_controller.dart';
+import 'package:la_isla/controllers/auth_controller.dart';
 import 'package:la_isla/enums/enums.dart';
 import 'package:la_isla/pages/forgot_password_page.dart';
 import 'package:la_isla/pages/signup_page.dart';

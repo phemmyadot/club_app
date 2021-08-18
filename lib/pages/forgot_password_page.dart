@@ -3,7 +3,7 @@ import 'package:la_isla/pages/login_page.dart';
 import 'package:la_isla/widgets/shared/buttons.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
-import 'package:la_isla/controllers/authentication_controller.dart';
+import 'package:la_isla/controllers/auth_controller.dart';
 import 'package:la_isla/enums/enums.dart';
 import 'package:la_isla/strings/strings.dart';
 import 'package:la_isla/theme/colors.dart';
