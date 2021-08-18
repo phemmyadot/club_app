@@ -1,4 +1,4 @@
-package com.example.la_isla
+package com.ars.laisla
 
 import io.flutter.embedding.android.FlutterActivity
 

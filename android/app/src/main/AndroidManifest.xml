@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.la_isla">
+    package="com.ars.laisla">
    <application
         android:label="la_isla"
         android:icon="@mipmap/ic_launcher">
