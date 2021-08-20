@@ -14,3 +14,5 @@ const String GOOGLE = SVG_PATH + 'google.svg';
 const String ICON_LOGIN = SVG_PATH + 'icon_login.svg';
 const String ICON_REGISTER = SVG_PATH + 'icon_register.svg';
 const String OR_ICON = SVG_PATH + 'or.png';
+const String MENU_ICON = SVG_PATH + 'menu.png';
+const String NOTIFICATION_ICON = SVG_PATH + 'notification.png';

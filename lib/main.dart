@@ -8,6 +8,7 @@ import 'package:la_isla/pages/splash.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         }
       },
       child: GetMaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Flutter Demo',
           initialBinding: RootBinding(),
           theme: ThemeData(
