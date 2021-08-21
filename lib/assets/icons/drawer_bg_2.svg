@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="802" viewBox="0 0 288 802">
+  <defs>
+    <filter id="_3" x="0" y="46" width="244" height="706" filterUnits="userSpaceOnUse">
+      <feOffset dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feFlood flood-color="#743425" flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_2" x="10" y="22" width="244" height="757" filterUnits="userSpaceOnUse">
+      <feOffset dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur-2"/>
+      <feFlood flood-color="#743425" flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="_1" x="24" y="0" width="264" height="802" filterUnits="userSpaceOnUse">
+      <feOffset dy="16" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="20" result="blur-3"/>
+      <feFlood flood-color="#743425" flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="screens" transform="translate(-1008 -941)">
+    <g transform="matrix(1, 0, 0, 1, 1008, 941)" filter="url(#_3)">
+      <rect id="_3-2" data-name="3" width="124" height="586" rx="30" transform="translate(60 90)" fill="#222" opacity="0.251"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1008, 941)" filter="url(#_2)">
+      <rect id="_2-2" data-name="2" width="124" height="637" rx="30" transform="translate(70 66)" fill="#222" opacity="0.502"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 1008, 941)" filter="url(#_1)">
+      <rect id="_1-2" data-name="1" width="144" height="682" rx="30" transform="translate(84 44)" fill="#222"/>
+    </g>
+  </g>
+</svg>

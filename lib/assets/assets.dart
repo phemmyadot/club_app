@@ -25,6 +25,13 @@ const String SIGNUP_ICN = PNG_PATH + 'signup_icn.png';
 const String DJ1 = PNG_PATH + 'dj1.png';
 const String DJ2 = PNG_PATH + 'dj2.png';
 const String DJ3 = PNG_PATH + 'dj3.png';
+const String DRAWER_BG = PNG_PATH + 'drawer_bg.png';
+const String DRAWER_BG_2 = PNG_PATH + 'drawer_bg_2.png';
+const String LOGOUT_MENU_ICN = PNG_PATH + 'logout_menu_icn.png';
+const String GALLERY_MENU_ICN = PNG_PATH + 'gallery_menu_icn.png';
+const String SHOP_MENU_ICN = PNG_PATH + 'shop_menu_icn.png';
+const String MUSIC_MENU_ICN = PNG_PATH + 'music_menu_icn.png';
+const String ACCOUNT_MENU_ICN = PNG_PATH + 'account_menu_icn.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';

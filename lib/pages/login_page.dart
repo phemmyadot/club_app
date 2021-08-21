@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/controllers/auth_controller.dart';
 import 'package:la_isla/enums/enums.dart';
-import 'package:la_isla/pages/event_page.dart';
+import 'package:la_isla/pages/home_page.dart';
 import 'package:la_isla/pages/forgot_password_page.dart';
 import 'package:la_isla/pages/signup_page.dart';
 import 'package:la_isla/strings/strings.dart';
@@ -87,7 +87,7 @@ class LoginPage extends StatelessWidget {
                                           text: Strings.login,
                                           iconColor: AppColors.white,
                                           onTap: () =>
-                                              Get.to(() => EventPage())),
+                                              Get.to(() => HomePage())),
                                       SizedBox(height: 24),
                                       Image.asset(OR_ICON, height: 36),
                                       SizedBox(height: 24),

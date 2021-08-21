@@ -2,10 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/theme/colors.dart';
+import 'package:la_isla/widgets/shared/app-drawer.dart';
 import 'package:la_isla/widgets/shared/app_bar.dart';
-import 'package:la_isla/widgets/shared/app_bottom_nav.dart';
-import 'package:la_isla/widgets/shared/app_floating-button.dart';
-import 'package:percent_indicator/percent_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class EventDetailsPage extends StatelessWidget {
@@ -15,6 +13,7 @@ class EventDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.black,
+      drawer: CustomAppDrawer(),
       appBar: PreferredSize(
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
@@ -108,7 +107,7 @@ class EventDetailsPage extends StatelessWidget {
                         child: Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.only(left: 8.0),
+                              padding: EdgeInsets.only(left: 5.0),
                               child: ImageIcon(
                                 AssetImage(INFORMATION_ICN),
                                 color: AppColors.white,
@@ -117,7 +116,7 @@ class EventDetailsPage extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 4),
+                                  horizontal: 10, vertical: 4),
                               child: Text(
                                 'Information',
                                 style: TextStyle(
@@ -138,7 +137,7 @@ class EventDetailsPage extends StatelessWidget {
                         child: Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.only(left: 8.0),
+                              padding: EdgeInsets.only(left: 5.0),
                               child: ImageIcon(
                                 AssetImage(RESERVATION_ICN),
                                 color: AppColors.white,
@@ -147,7 +146,7 @@ class EventDetailsPage extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 4),
+                                  horizontal: 10, vertical: 4),
                               child: Text(
                                 'Reservations',
                                 style: TextStyle(
@@ -168,7 +167,7 @@ class EventDetailsPage extends StatelessWidget {
                         child: Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.only(left: 8.0),
+                              padding: EdgeInsets.only(left: 5.0),
                               child: ImageIcon(
                                 AssetImage(SIGNUP_ICN),
                                 color: AppColors.white,
@@ -177,7 +176,7 @@ class EventDetailsPage extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 4),
+                                  horizontal: 10, vertical: 4),
                               child: Text(
                                 'Sign up',
                                 style: TextStyle(
@@ -202,7 +201,7 @@ class EventDetailsPage extends StatelessWidget {
                         child: Row(
                           children: [
                             Container(
-                              padding: EdgeInsets.only(left: 8.0),
+                              padding: EdgeInsets.only(left: 5.0),
                               child: ImageIcon(
                                 AssetImage(SPONSORSHIPS_ICN),
                                 color: AppColors.white,
@@ -211,7 +210,7 @@ class EventDetailsPage extends StatelessWidget {
                             ),
                             Container(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 4),
+                                  horizontal: 10, vertical: 4),
                               child: Text(
                                 'Sponsors',
                                 style: TextStyle(
@@ -313,9 +312,6 @@ class EventDetailsPage extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: CustomFloatingButton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: CustomBottomNav(),
     );
   }
 }

@@ -26,7 +26,7 @@ class CustomAppBar extends StatelessWidget {
         alignment: Alignment.centerLeft,
         padding: EdgeInsets.only(left: 20.0),
         child: GestureDetector(
-          onTap: () => {},
+          onTap: () => Scaffold.of(context).openDrawer(),
           child: Image.asset(
             MENU_ICON,
             fit: BoxFit.contain,

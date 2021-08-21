@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
+import 'package:la_isla/pages/event_details_page.dart';
+import 'package:la_isla/pages/home_page.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class CustomBottomNav extends StatelessWidget {
@@ -19,6 +22,23 @@ class CustomBottomNav extends StatelessWidget {
             showSelectedLabels: false,
             showUnselectedLabels: false,
             currentIndex: 0,
+            onTap: (index) {
+              switch (index) {
+                case 0:
+                  Get.to(() => HomePage());
+                  break;
+                case 1:
+                  Get.to(() => EventDetailsPage());
+                  break;
+
+                // case 3:
+                //   Get.to(() => HomePage());
+                //   break;
+                // case 4:
+                //   Get.to(() => HomePage());
+                //   break;
+              }
+            },
             items: [
               BottomNavigationBarItem(
                 icon: ImageIcon(

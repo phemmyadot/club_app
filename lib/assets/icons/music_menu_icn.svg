@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Page-1" transform="translate(0 0)">
+    <g id="Artboard" transform="translate(-1545 -1815)">
+      <g id="music" transform="translate(1546 1816)">
+        <path id="Shape" d="M6,14H2a2,2,0,0,0,0,4H4a2,2,0,0,0,2-2Zm12-2H14a2,2,0,0,0,0,4h2a2,2,0,0,0,2-2Z" fill="none" stroke="#ecb3bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+        <path id="Shape-2" data-name="Shape" d="M6,14V2L18,0V12" fill="none" stroke="#ecb3bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" fill-rule="evenodd"/>
+      </g>
+    </g>
+  </g>
+</svg>

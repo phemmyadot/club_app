@@ -3,21 +3,21 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/theme/colors.dart';
+import 'package:la_isla/widgets/shared/app-drawer.dart';
 import 'package:la_isla/widgets/shared/app_bar.dart';
-import 'package:la_isla/widgets/shared/app_bottom_nav.dart';
-import 'package:la_isla/widgets/shared/app_floating-button.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 import 'event_details_page.dart';
 
-class EventPage extends StatelessWidget {
-  const EventPage({Key? key}) : super(key: key);
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.black,
+      drawer: CustomAppDrawer(),
       appBar: PreferredSize(
           preferredSize:
               Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
@@ -136,8 +136,8 @@ class EventPage extends StatelessWidget {
                       ),
                       Container(
                         width: 90,
-                        alignment: Alignment.centerRight,
-                        // padding: EdgeInsets.only(top: 20.0),
+                        padding: EdgeInsets.only(
+                            right: MediaQuery.of(context).size.width * 0.07),
                         child: new CircularPercentIndicator(
                           radius: 120.0,
                           lineWidth: 12.0,
@@ -321,9 +321,6 @@ class EventPage extends StatelessWidget {
           ),
         ),
       ),
-      floatingActionButton: CustomFloatingButton(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: CustomBottomNav(),
     );
   }
 }
