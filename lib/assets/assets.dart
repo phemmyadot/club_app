@@ -13,6 +13,18 @@ const String EVENT_PAGE_BG = PNG_PATH + 'event_page_bg.png';
 const String CAROUSEL_ITEM_1 = PNG_PATH + 'carousel_item_1.png';
 const String CAROUSEL_ITEM_2 = PNG_PATH + 'carousel_item_2.png';
 const String CAROUSEL_ITEM_3 = PNG_PATH + 'carousel_item_3.png';
+const String HOME_MENU_BTN = PNG_PATH + 'home_menu_btn.png';
+const String EVENT_MENU_BTN = PNG_PATH + 'event_menu_btn.png';
+const String LINE_MENU_BTN = PNG_PATH + 'line_menu_btn.png';
+const String CHAT_MENU_BTN = PNG_PATH + 'chat_menu_btn.png';
+const String PROFILE_MENU_BTN = PNG_PATH + 'profile_menu_btn.png';
+const String SPONSORSHIPS_ICN = PNG_PATH + 'sponsorships_icn.png';
+const String RESERVATION_ICN = PNG_PATH + 'reservation_icn.png';
+const String INFORMATION_ICN = PNG_PATH + 'information_icn.png';
+const String SIGNUP_ICN = PNG_PATH + 'signup_icn.png';
+const String DJ1 = PNG_PATH + 'dj1.png';
+const String DJ2 = PNG_PATH + 'dj2.png';
+const String DJ3 = PNG_PATH + 'dj3.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';

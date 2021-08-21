@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class CustomBottomNav extends StatelessWidget {
@@ -20,8 +21,8 @@ class CustomBottomNav extends StatelessWidget {
             currentIndex: 0,
             items: [
               BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
+                icon: ImageIcon(
+                  AssetImage(HOME_MENU_BTN),
                   color: AppColors.white,
                   size: 30,
                 ),
@@ -30,32 +31,47 @@ class CustomBottomNav extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Container(
                   padding: EdgeInsets.only(right: 30),
-                  child: new Icon(
-                    Icons.search,
+                  child: ImageIcon(
+                    AssetImage(EVENT_MENU_BTN),
                     color: AppColors.white,
                     size: 30,
                   ),
                 ),
-                label: 'Search',
+                label: 'Event',
               ),
               BottomNavigationBarItem(
                 icon: Container(
-                  padding: EdgeInsets.only(left: 30),
-                  child: Icon(
-                    Icons.perm_identity,
+                  width: 50.0,
+                  padding: EdgeInsets.only(top: 10),
+                  child: ImageIcon(
+                    AssetImage(LINE_MENU_BTN),
                     color: AppColors.white,
                     size: 30,
                   ),
                 ),
-                label: 'Search',
+                label: 'Line',
               ),
               BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.more_horiz,
-                  color: AppColors.white,
-                  size: 30,
+                icon: Container(
+                  width: 50.0,
+                  child: ImageIcon(
+                    AssetImage(CHAT_MENU_BTN),
+                    color: AppColors.white,
+                    size: 30,
+                  ),
                 ),
-                label: 'Search',
+                label: 'Chat',
+              ),
+              BottomNavigationBarItem(
+                icon: Container(
+                  width: 50.0,
+                  child: ImageIcon(
+                    AssetImage(PROFILE_MENU_BTN),
+                    color: AppColors.white,
+                    size: 30,
+                  ),
+                ),
+                label: 'Profile',
               ),
             ]),
       ),

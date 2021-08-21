@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/theme/colors.dart';
 import 'package:la_isla/widgets/shared/app_bar.dart';
@@ -7,6 +8,8 @@ import 'package:la_isla/widgets/shared/app_bottom_nav.dart';
 import 'package:la_isla/widgets/shared/app_floating-button.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+
+import 'event_details_page.dart';
 
 class EventPage extends StatelessWidget {
   const EventPage({Key? key}) : super(key: key);
@@ -30,7 +33,7 @@ class EventPage extends StatelessWidget {
           ),
         ),
         alignment: Alignment.center,
-        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 30.0),
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
@@ -82,90 +85,94 @@ class EventPage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25.0),
-                  color: AppColors.black,
-                  image: DecorationImage(
-                    image: AssetImage(EVENT_BG_1),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(
-                        Colors.transparent.withOpacity(0.8), BlendMode.dstATop),
+              GestureDetector(
+                onTap: () => Get.to(() => EventDetailsPage()),
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25.0),
+                    color: AppColors.black,
+                    image: DecorationImage(
+                      image: AssetImage(EVENT_BG_1),
+                      fit: BoxFit.cover,
+                      colorFilter: ColorFilter.mode(
+                          Colors.transparent.withOpacity(0.8),
+                          BlendMode.dstATop),
+                    ),
                   ),
-                ),
-                height: MediaQuery.of(context).size.height * 0.3,
-                width: MediaQuery.of(context).size.width * 0.93,
-                child: Row(
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          padding: EdgeInsets.only(top: 35.0, left: 15.0),
-                          child: Text(
-                            'New Year’s Eve tickets 21/22',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: 17,
-                                fontWeight: FontWeight.normal,
-                                letterSpacing: 0.9,
-                                fontFamily: 'Montserrat'),
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.only(top: 10.0, left: 10.0),
-                          child: Text(
-                            'NEON PARTY',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: 26,
-                                fontWeight: FontWeight.normal,
-                                letterSpacing: 0.9,
-                                fontFamily: 'Montserrat'),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      width: 90,
-                      alignment: Alignment.centerRight,
-                      // padding: EdgeInsets.only(top: 20.0),
-                      child: new CircularPercentIndicator(
-                        radius: 120.0,
-                        lineWidth: 12.0,
-                        percent: 0.19,
-                        rotateLinearGradient: true,
-                        backgroundColor: AppColors.white,
-                        animation: true,
-                        animationDuration: 1200,
-                        startAngle: 0.5,
-                        center: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              "19%",
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  width: MediaQuery.of(context).size.width * 0.93,
+                  child: Row(
+                    children: [
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(top: 35.0, left: 15.0),
+                            child: Text(
+                              'New Year’s Eve tickets 21/22',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: 20,
-                              ),
+                                  color: AppColors.white,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.normal,
+                                  letterSpacing: 0.9,
+                                  fontFamily: 'Montserrat'),
                             ),
-                            Text(
-                              "Free",
+                          ),
+                          Container(
+                            padding: EdgeInsets.only(top: 10.0, left: 10.0),
+                            child: Text(
+                              'NEON PARTY',
                               textAlign: TextAlign.center,
                               style: TextStyle(
-                                color: AppColors.white,
-                                fontSize: 20,
-                              ),
+                                  color: AppColors.white,
+                                  fontSize: 26,
+                                  fontWeight: FontWeight.normal,
+                                  letterSpacing: 0.9,
+                                  fontFamily: 'Montserrat'),
                             ),
-                          ],
-                        ),
-                        progressColor: AppColors.primaryPink,
+                          ),
+                        ],
                       ),
-                    ),
-                  ],
+                      Container(
+                        width: 90,
+                        alignment: Alignment.centerRight,
+                        // padding: EdgeInsets.only(top: 20.0),
+                        child: new CircularPercentIndicator(
+                          radius: 120.0,
+                          lineWidth: 12.0,
+                          percent: 0.19,
+                          rotateLinearGradient: true,
+                          backgroundColor: AppColors.white,
+                          animation: true,
+                          animationDuration: 1200,
+                          startAngle: 0.5,
+                          center: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "19%",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              Text(
+                                "Free",
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                          progressColor: AppColors.primaryPink,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
