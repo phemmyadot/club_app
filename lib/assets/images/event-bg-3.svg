@@ -11,10 +11,7 @@
       <feComposite in="SourceGraphic"/>
     </filter>
   </defs>
-  <g id="Card" transform="translate(8.5 9)">
-    <g transform="matrix(1, 0, 0, 1, -8.5, -9)" filter="url(#Rectangle)">
-      <rect id="Rectangle-2" data-name="Rectangle" width="174" height="144" rx="10" transform="translate(9 9)" opacity="0.2" fill="url(#pattern)"/>
-    </g>
-    <text id="Deep_Sleep" data-name="Deep Sleep" transform="translate(87.5 81)" fill="#fff" font-size="26" font-family="Montserrat-Regular, Montserrat" letter-spacing="0.071em"><tspan x="-58.099" y="0">OFFERS</tspan></text>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle)">
+    <rect id="Rectangle-2" data-name="Rectangle" width="174" height="144" rx="10" transform="translate(9 9)" opacity="0.2" fill="url(#pattern)"/>
   </g>
 </svg>

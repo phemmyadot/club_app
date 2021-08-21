@@ -35,7 +35,8 @@ class EventPage extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height * 0.35,
+                padding: EdgeInsets.only(bottom: 20.0),
+                height: MediaQuery.of(context).size.height * 0.50,
                 width: MediaQuery.of(context).size.width,
                 child: CarouselSlider(
                   items: [
@@ -71,9 +72,9 @@ class EventPage extends StatelessWidget {
                     ),
                   ],
                   options: CarouselOptions(
+                    height: MediaQuery.of(context).size.height,
                     enlargeCenterPage: true,
                     autoPlay: true,
-                    aspectRatio: 16 / 9,
                     autoPlayCurve: Curves.fastOutSlowIn,
                     enableInfiniteScroll: true,
                     autoPlayAnimationDuration: Duration(milliseconds: 800),
@@ -84,6 +85,7 @@ class EventPage extends StatelessWidget {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25.0),
+                  color: AppColors.black,
                   image: DecorationImage(
                     image: AssetImage(EVENT_BG_1),
                     fit: BoxFit.cover,
@@ -92,7 +94,7 @@ class EventPage extends StatelessWidget {
                   ),
                 ),
                 height: MediaQuery.of(context).size.height * 0.3,
-                width: MediaQuery.of(context).size.width,
+                width: MediaQuery.of(context).size.width * 0.93,
                 child: Row(
                   children: [
                     Column(
@@ -127,71 +129,186 @@ class EventPage extends StatelessWidget {
                       ],
                     ),
                     Container(
-                        width: 90,
-                        alignment: Alignment.centerRight,
-                        // padding: EdgeInsets.only(top: 20.0),
-                        child: new CircularPercentIndicator(
-                          radius: 120.0,
-                          lineWidth: 12.0,
-                          percent: 0.19,
-                          rotateLinearGradient: true,
-                          backgroundColor: AppColors.white,
-                          animation: true,
-                          animationDuration: 1200,
-                          startAngle: 0.5,
-                          center: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text(
-                                "19%",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 20,
-                                ),
+                      width: 90,
+                      alignment: Alignment.centerRight,
+                      // padding: EdgeInsets.only(top: 20.0),
+                      child: new CircularPercentIndicator(
+                        radius: 120.0,
+                        lineWidth: 12.0,
+                        percent: 0.19,
+                        rotateLinearGradient: true,
+                        backgroundColor: AppColors.white,
+                        animation: true,
+                        animationDuration: 1200,
+                        startAngle: 0.5,
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "19%",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 20,
                               ),
-                              Text(
-                                "Free",
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  color: AppColors.white,
-                                  fontSize: 20,
-                                ),
+                            ),
+                            Text(
+                              "Free",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: AppColors.white,
+                                fontSize: 20,
                               ),
-                            ],
-                          ),
-                          progressColor: AppColors.primaryPink,
-                        )),
+                            ),
+                          ],
+                        ),
+                        progressColor: AppColors.primaryPink,
+                      ),
+                    ),
                   ],
                 ),
               ),
-              Container(
-                height: 100,
-                child: Text(
-                  'widget 1',
-                  style: TextStyle(color: AppColors.white),
-                ),
+              SizedBox(
+                height: 25.0,
               ),
               Container(
-                height: 100,
-                child: Text(
-                  'widget 1',
-                  style: TextStyle(color: AppColors.white),
+                padding: EdgeInsets.only(top: 30.0),
+                decoration: BoxDecoration(
+                  color: AppColors.black,
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppColors.primaryPink,
+                      blurRadius: 5.0, // soften the shadow
+                      spreadRadius: 1.0, //extend the shadow
+                    )
+                  ],
+                  borderRadius: BorderRadius.circular(20.0),
+                  image: DecorationImage(
+                    image: AssetImage(EVENT_BG_2),
+                    fit: BoxFit.cover,
+                    colorFilter: ColorFilter.mode(
+                        Colors.transparent.withOpacity(0.8), BlendMode.dstATop),
+                  ),
                 ),
+                height: MediaQuery.of(context).size.height * 0.25,
+                width: MediaQuery.of(context).size.width * 0.93,
+                child: Container(),
+              ),
+              SizedBox(
+                height: 30,
               ),
               Container(
-                height: 100,
-                child: Text(
-                  'widget 1',
-                  style: TextStyle(color: AppColors.white),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 10.0),
+                      height: MediaQuery.of(context).size.height * 0.27,
+                      width: MediaQuery.of(context).size.width * 0.45,
+                      color: AppColors.black.withOpacity(0.5),
+                      child: Column(
+                        children: [
+                          Container(
+                            padding: EdgeInsets.only(bottom: 20.0),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: Text(
+                              'Capacity',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: AppColors.white,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.normal,
+                                  letterSpacing: 0.9,
+                                  fontFamily: 'Montserrat'),
+                            ),
+                          ),
+                          new CircularPercentIndicator(
+                            radius: 110.0,
+                            lineWidth: 12.0,
+                            percent: 0.49,
+                            rotateLinearGradient: true,
+                            backgroundColor: AppColors.white,
+                            animation: true,
+                            animationDuration: 1200,
+                            center: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "49%",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.white,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                                Text(
+                                  "Free",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: AppColors.white,
+                                    fontSize: 20,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            progressColor: AppColors.primaryPink,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(top: 10.0),
+                      height: MediaQuery.of(context).size.height * 0.30,
+                      width: MediaQuery.of(context).size.width * 0.45,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.0),
+                        image: DecorationImage(
+                          image: AssetImage(EVENT_BG_3),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          'OFFERS',
+                          textAlign: TextAlign.center,
+                          style:
+                              TextStyle(color: AppColors.white, fontSize: 26),
+                        ),
+                      ),
+                    )
+                  ],
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
               Container(
-                height: 100,
-                child: Text(
-                  'widget 1',
-                  style: TextStyle(color: AppColors.white),
+                padding: EdgeInsets.only(top: 10.0),
+                decoration: BoxDecoration(
+                  color: AppColors.black,
+                  borderRadius: BorderRadius.circular(30.0),
+                  image: DecorationImage(
+                    image: AssetImage(EVENT_BG_4),
+                    fit: BoxFit.cover,
+                  ),
                 ),
+                height: MediaQuery.of(context).size.height * 0.30,
+                width: MediaQuery.of(context).size.width * 0.93,
+                child: Center(
+                  child: Text(
+                    'NIGHT MODE',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: AppColors.white, fontSize: 26),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
               ),
             ],
           ),
