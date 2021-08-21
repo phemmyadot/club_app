@@ -14,8 +14,60 @@ class EventPage extends StatelessWidget {
       backgroundColor: AppColors.black,
       appBar: PreferredSize(
           preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.5),
+              Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
           child: CustomAppBar()),
+      body: SingleChildScrollView(
+        child: Container(
+          alignment: Alignment.center,
+          padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 30.0),
+          child: Column(
+            children: [
+              Container(
+                height: 100,
+                child: Text(
+                  'widget 1',
+                  style: TextStyle(color: AppColors.white),
+                ),
+              ),
+              Container(
+                height: 100,
+                child: Text(
+                  'widget 1',
+                  style: TextStyle(color: AppColors.white),
+                ),
+              ),
+              Container(
+                height: 100,
+                child: Text(
+                  'widget 1',
+                  style: TextStyle(color: AppColors.white),
+                ),
+              ),
+              Container(
+                height: 100,
+                child: Text(
+                  'widget 1',
+                  style: TextStyle(color: AppColors.white),
+                ),
+              ),
+              Container(
+                height: 100,
+                child: Text(
+                  'widget 1',
+                  style: TextStyle(color: AppColors.white),
+                ),
+              ),
+              Container(
+                height: 100,
+                child: Text(
+                  'widget 1',
+                  style: TextStyle(color: AppColors.white),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       floatingActionButton: CustomFloatingButton(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: CustomBottomNav(),
