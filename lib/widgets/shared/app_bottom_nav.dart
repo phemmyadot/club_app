@@ -17,7 +17,8 @@ class CustomBottomNav extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(top: 10.0),
         child: BottomNavigationBar(
-            backgroundColor: Color(0xFFF39DB6),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
             type: BottomNavigationBarType.fixed,
             showSelectedLabels: false,
             showUnselectedLabels: false,

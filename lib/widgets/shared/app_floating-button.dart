@@ -18,10 +18,11 @@ class CustomFloatingButton extends StatelessWidget {
           elevation: 0,
           onPressed: () => Get.to(() => NightModePage()),
           child: Container(
-            height: 75,
-            width: 75,
+            height: 70,
+            width: 70,
+            margin: EdgeInsets.all(8),
             decoration: BoxDecoration(
-              border: Border.all(width: 5),
+              border: Border.all(width: 5, color: Colors.transparent),
               shape: BoxShape.circle,
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
