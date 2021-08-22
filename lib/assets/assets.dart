@@ -39,6 +39,8 @@ const String SOFTDRINK_ICN = PNG_PATH + 'softdrink_icn.png';
 const String CHAT_ICN = PNG_PATH + 'chat_icn.png';
 const String GROUP_ICN = PNG_PATH + 'group_icn.png';
 const String FAVOURITE_ICN = PNG_PATH + 'favourite_icn.png';
+const String SEND_ICN = PNG_PATH + 'send_icn.png';
+const String ARROW_BACK = PNG_PATH + 'arrow_back.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';

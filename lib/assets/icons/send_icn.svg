@@ -1,0 +1,5 @@
+<svg id="Send_Icon" data-name="Send Icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <rect id="bound" width="24" height="24" fill="none"/>
+  <path id="Combined_Shape" data-name="Combined Shape" d="M.5,13.457a.5.5,0,0,1-.5-.5V7.895L12.447,6.728,0,5.561V.5A.5.5,0,0,1,.706.044l13.84,6.228a.5.5,0,0,1,0,.913L.706,13.413A.5.5,0,0,1,.5,13.457Z" transform="translate(8 5.272)" fill="#fff"/>
+  <path id="Combined_Shape-2" data-name="Combined Shape" d="M4,12a1,1,0,0,1,0-2H5a1,1,0,0,1,0,2ZM1,7A1,1,0,0,1,1,5H5A1,1,0,0,1,5,7ZM4,2A1,1,0,1,1,4,0H5A1,1,0,0,1,5,2Z" transform="translate(0 6)" fill="#fff"/>
+</svg>

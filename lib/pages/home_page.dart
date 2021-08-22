@@ -5,6 +5,8 @@ import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/theme/colors.dart';
 import 'package:la_isla/widgets/shared/app-drawer.dart';
 import 'package:la_isla/widgets/shared/app_bar.dart';
+import 'package:la_isla/widgets/shared/app_bottom_nav.dart';
+import 'package:la_isla/widgets/shared/app_floating-button.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -327,6 +329,9 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: CustomFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: CustomBottomNav(),
     );
   }
 }

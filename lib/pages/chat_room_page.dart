@@ -35,7 +35,6 @@ class ChatRoomPage extends StatelessWidget {
       ],
     );
     return DefaultTabController(
-      key: Key('TabController'),
       length: 3,
       child: Scaffold(
         appBar: PreferredSize(

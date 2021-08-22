@@ -5,6 +5,8 @@ import 'package:la_isla/theme/colors.dart';
 import 'package:la_isla/widgets/shared/app-drawer.dart';
 import 'package:la_isla/widgets/shared/app_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:la_isla/widgets/shared/app_bottom_nav.dart';
+import 'package:la_isla/widgets/shared/app_floating-button.dart';
 
 class EventDetailsPage extends StatelessWidget {
   const EventDetailsPage({Key? key}) : super(key: key);
@@ -316,6 +318,9 @@ class EventDetailsPage extends StatelessWidget {
           ),
         ),
       ),
+      floatingActionButton: CustomFloatingButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: CustomBottomNav(),
     );
   }
 }
