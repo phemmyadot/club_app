@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
+import 'package:la_isla/pages/chat_room_page.dart';
 import 'package:la_isla/pages/event_details_page.dart';
 import 'package:la_isla/pages/home_page.dart';
 import 'package:la_isla/theme/colors.dart';
@@ -11,7 +12,7 @@ class CustomBottomNav extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Color(0xFFF39DB6),
+      color: AppColors.gradient1,
       shape: CircularNotchedRectangle(),
       notchMargin: 2.5,
       child: Container(
@@ -32,9 +33,9 @@ class CustomBottomNav extends StatelessWidget {
                   Get.to(() => EventDetailsPage());
                   break;
 
-                // case 3:
-                //   Get.to(() => HomePage());
-                //   break;
+                case 3:
+                  Get.to(() => ChatRoomPage());
+                  break;
                 // case 4:
                 //   Get.to(() => HomePage());
                 //   break;

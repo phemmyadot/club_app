@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
+import 'package:la_isla/pages/chat_room_page.dart';
 import 'package:la_isla/pages/event_details_page.dart';
 import 'package:la_isla/pages/home_page.dart';
 import 'package:la_isla/pages/login_page.dart';
@@ -150,24 +151,29 @@ class CustomAppDrawer extends StatelessWidget {
               ),
               Container(
                 padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      CHAT_MENU_BTN,
-                      color: AppColors.secondaryPink,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'Chat rooms',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: 18,
+                child: InkWell(
+                  onTap: () => Get.to(
+                    () => ChatRoomPage(),
+                  ),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        CHAT_MENU_BTN,
+                        color: AppColors.secondaryPink,
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'Chat rooms',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: AppColors.white,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(

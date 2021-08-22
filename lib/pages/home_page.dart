@@ -15,13 +15,19 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final tabView = Container();
+
     return Scaffold(
       backgroundColor: AppColors.black,
       drawer: CustomAppDrawer(),
       appBar: PreferredSize(
-          preferredSize:
-              Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
-          child: CustomAppBar()),
+        preferredSize:
+            Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
+        child: CustomAppBar(
+          showGradient: false,
+          tabView: tabView,
+        ),
+      ),
       body: Container(
         height: MediaQuery.of(context).size.height,
         decoration: BoxDecoration(

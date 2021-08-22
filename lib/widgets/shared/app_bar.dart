@@ -3,15 +3,46 @@ import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({Key? key}) : super(key: key);
+  const CustomAppBar(
+      {Key? key, required this.showGradient, required this.tabView})
+      : super(key: key);
+  final bool showGradient;
+  final Widget tabView;
 
   @override
   Widget build(BuildContext context) {
+    final gradientBg = Container(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+            AppColors.gradient1,
+            AppColors.gradient2,
+          ])),
+    );
+
+    final noGradientBg = Container(
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+            AppColors.black,
+            AppColors.black,
+          ])),
+    );
     return AppBar(
-      toolbarHeight: 60.0,
+      toolbarHeight: 80.0,
       automaticallyImplyLeading: false,
       elevation: 0.0,
       backgroundColor: AppColors.black,
+      flexibleSpace: showGradient ? gradientBg : noGradientBg,
+      bottom: PreferredSize(
+        child: tabView,
+        preferredSize:
+            Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
+      ),
       title: Container(
         alignment: Alignment.center,
         padding: EdgeInsets.only(bottom: 7.0),

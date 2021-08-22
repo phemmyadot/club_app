@@ -36,6 +36,9 @@ const String SEE_MORE_ICN = PNG_PATH + 'see_more_icn.png';
 const String SHIRT_ICN = PNG_PATH + 'shirt.png';
 const String MOJITO_ICN = PNG_PATH + 'mojito_icn.png';
 const String SOFTDRINK_ICN = PNG_PATH + 'softdrink_icn.png';
+const String CHAT_ICN = PNG_PATH + 'chat_icn.png';
+const String GROUP_ICN = PNG_PATH + 'group_icn.png';
+const String FAVOURITE_ICN = PNG_PATH + 'favourite_icn.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';
