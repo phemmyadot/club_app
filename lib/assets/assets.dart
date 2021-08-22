@@ -32,6 +32,10 @@ const String GALLERY_MENU_ICN = PNG_PATH + 'gallery_menu_icn.png';
 const String SHOP_MENU_ICN = PNG_PATH + 'shop_menu_icn.png';
 const String MUSIC_MENU_ICN = PNG_PATH + 'music_menu_icn.png';
 const String ACCOUNT_MENU_ICN = PNG_PATH + 'account_menu_icn.png';
+const String SEE_MORE_ICN = PNG_PATH + 'see_more_icn.png';
+const String SHIRT_ICN = PNG_PATH + 'shirt.png';
+const String MOJITO_ICN = PNG_PATH + 'mojito_icn.png';
+const String SOFTDRINK_ICN = PNG_PATH + 'softdrink_icn.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';
