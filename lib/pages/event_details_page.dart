@@ -248,10 +248,10 @@ class EventDetailsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    padding: EdgeInsets.only(left: 10.0, bottom: 10.0),
+                    padding: EdgeInsets.only(left: 30.0, bottom: 10.0),
                     child: Text(
                       'DJs',
-                      style: TextStyle(color: AppColors.white, fontSize: 20),
+                      style: TextStyle(color: AppColors.white, fontSize: 26),
                       textAlign: TextAlign.left,
                     ),
                   ),
