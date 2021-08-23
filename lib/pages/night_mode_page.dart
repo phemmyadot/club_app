@@ -15,6 +15,19 @@ class NightModePage extends StatelessWidget {
   Widget build(BuildContext context) {
     final tabView = Container();
 
+    void openCatalogBottomSheet() {
+      showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          builder: (BuildContext context) {
+            return Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(color: Colors.transparent,),
+            );
+          });
+    }
+
     return Scaffold(
       backgroundColor: AppColors.black,
       drawer: CustomAppDrawer(),
@@ -157,51 +170,54 @@ class NightModePage extends StatelessWidget {
                         ],
                       ),
                     ),
-                    Container(
-                      padding: EdgeInsets.only(top: 30.0),
-                      width: MediaQuery.of(context).size.width * 0.5,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        color: AppColors.white.withOpacity(0.1),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.only(top: 15.0),
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: AppColors.white,
-                              border: Border.all(
-                                width: 7,
-                                color: Colors.grey.withOpacity(0.4),
+                    GestureDetector(
+                      onTap: () => {openCatalogBottomSheet()},
+                      child: Container(
+                        padding: EdgeInsets.only(top: 30.0),
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          color: AppColors.white.withOpacity(0.1),
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.only(top: 15.0),
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: AppColors.white,
+                                border: Border.all(
+                                  width: 7,
+                                  color: Colors.grey.withOpacity(0.4),
+                                ),
+                              ),
+                              width: 120.0,
+                              height: 120.0,
+                              child: Text(
+                                '+',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 60,
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColors.primaryPink,
+                                    letterSpacing: 2.5),
                               ),
                             ),
-                            width: 120.0,
-                            height: 120.0,
-                            child: Text(
-                              '+',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 60,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.primaryPink,
-                                  letterSpacing: 2.5),
+                            Container(
+                              padding: EdgeInsets.only(top: 15.0),
+                              child: Text(
+                                'Add More',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 26,
+                                    fontWeight: FontWeight.bold,
+                                    color: AppColors.white,
+                                    letterSpacing: 2.5),
+                              ),
                             ),
-                          ),
-                          Container(
-                            padding: EdgeInsets.only(top: 15.0),
-                            child: Text(
-                              'Add More',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 26,
-                                  fontWeight: FontWeight.bold,
-                                  color: AppColors.white,
-                                  letterSpacing: 2.5),
-                            ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                     Container(
