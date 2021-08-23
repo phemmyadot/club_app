@@ -41,6 +41,12 @@ const String GROUP_ICN = PNG_PATH + 'group_icn.png';
 const String FAVOURITE_ICN = PNG_PATH + 'favourite_icn.png';
 const String SEND_ICN = PNG_PATH + 'send_icn.png';
 const String ARROW_BACK = PNG_PATH + 'arrow_back.png';
+const String CATALOG_1 = PNG_PATH + 'catalog_1.png';
+const String CATALOG_2 = PNG_PATH + 'catalog_2.png';
+const String CATALOG_3 = PNG_PATH + 'catalog_3.png';
+const String CATALOG_4 = PNG_PATH + 'catalog_4.png';
+const String CATALOG_5 = PNG_PATH + 'catalog_5.png';
+const String CATALOG_6 = PNG_PATH + 'catalog_6.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';
