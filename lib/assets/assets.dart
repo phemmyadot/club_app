@@ -48,6 +48,9 @@ const String CATALOG_4 = PNG_PATH + 'catalog_4.png';
 const String CATALOG_5 = PNG_PATH + 'catalog_5.png';
 const String CATALOG_6 = PNG_PATH + 'catalog_6.png';
 const String LOVE_ICN = PNG_PATH + 'love_icn.png';
+const String PROFILE_BG = PNG_PATH + 'profile_bg_img.png';
+const String GRID_ICN = PNG_PATH + 'grid_icn.png';
+const String DISCOUNT_ICN = PNG_PATH + 'discount_icn.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';
