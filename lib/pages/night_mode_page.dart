@@ -5,6 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
+import 'package:la_isla/pages/live_chat_page.dart';
 import 'package:la_isla/theme/colors.dart';
 import 'package:la_isla/widgets/shared/app-drawer.dart';
 import 'package:la_isla/widgets/shared/app_bar.dart';
@@ -1088,7 +1089,7 @@ class NightModePage extends StatelessWidget {
                               height: 50,
                               width: 220,
                               decoration: BoxDecoration(
-                                color: AppColors.grey2,
+                                color: AppColors.white,
                                 borderRadius: BorderRadius.only(
                                   topRight: Radius.circular(15),
                                   bottomRight: Radius.circular(15),
@@ -1133,11 +1134,14 @@ class NightModePage extends StatelessWidget {
                                 ),
                               ),
                               child: Center(
-                                  child: Text('Buy',
-                                      style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.normal,
-                                          color: AppColors.black))),
+                                child: Text(
+                                  'Buy',
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.normal,
+                                      color: AppColors.black),
+                                ),
+                              ),
                             )
                           ],
                         ),
@@ -1402,28 +1406,32 @@ class NightModePage extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                padding: EdgeInsets.only(top: 30.0),
-                decoration: BoxDecoration(
-                  color: AppColors.black,
-                  boxShadow: [
-                    BoxShadow(
-                      color: AppColors.primaryPink,
-                      blurRadius: 5.0, // soften the shadow
-                      spreadRadius: 1.0, //extend the shadow
-                    )
-                  ],
-                  borderRadius: BorderRadius.circular(20.0),
-                  image: DecorationImage(
-                    image: AssetImage(EVENT_BG_2),
-                    fit: BoxFit.cover,
-                    colorFilter: ColorFilter.mode(
-                        Colors.transparent.withOpacity(0.8), BlendMode.dstATop),
+              GestureDetector(
+                onTap: () => Get.to(LiveChatPage()),
+                child: Container(
+                  padding: EdgeInsets.only(top: 30.0),
+                  decoration: BoxDecoration(
+                    color: AppColors.black,
+                    boxShadow: [
+                      BoxShadow(
+                        color: AppColors.primaryPink,
+                        blurRadius: 5.0, // soften the shadow
+                        spreadRadius: 1.0, //extend the shadow
+                      )
+                    ],
+                    borderRadius: BorderRadius.circular(20.0),
+                    image: DecorationImage(
+                      image: AssetImage(EVENT_BG_2),
+                      fit: BoxFit.cover,
+                      colorFilter: ColorFilter.mode(
+                          Colors.transparent.withOpacity(0.8),
+                          BlendMode.dstATop),
+                    ),
                   ),
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: MediaQuery.of(context).size.width * 0.93,
+                  child: Container(),
                 ),
-                height: MediaQuery.of(context).size.height * 0.25,
-                width: MediaQuery.of(context).size.width * 0.93,
-                child: Container(),
               ),
               Container(
                 padding: EdgeInsets.only(left: 40, top: 40),

@@ -4,6 +4,7 @@ import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/pages/chat_room_page.dart';
 import 'package:la_isla/pages/event_details_page.dart';
 import 'package:la_isla/pages/home_page.dart';
+import 'package:la_isla/pages/profile_page.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class CustomBottomNav extends StatelessWidget {
@@ -36,9 +37,9 @@ class CustomBottomNav extends StatelessWidget {
                 case 3:
                   Get.to(() => ChatRoomPage());
                   break;
-                // case 4:
-                //   Get.to(() => HomePage());
-                //   break;
+                case 4:
+                  Get.to(() => ProfilePage());
+                  break;
               }
             },
             items: [

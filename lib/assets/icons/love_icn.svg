@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118" height="118" viewBox="0 0 118 118">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1.25" x2="0.5" y2="-0.25" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e43d9b"/>
+      <stop offset="0.452" stop-color="#c73ca1"/>
+      <stop offset="1" stop-color="#ff5b93"/>
+    </linearGradient>
+    <filter id="btn" x="0" y="0" width="118" height="118" filterUnits="userSpaceOnUse">
+      <feOffset dy="15" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#763e28" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="love" transform="translate(-584 -1608)">
+    <g transform="matrix(1, 0, 0, 1, 584, 1608)" filter="url(#btn)">
+      <circle id="btn-2" data-name="btn" cx="29" cy="29" r="29" transform="translate(30 15)" fill="url(#linear-gradient)"/>
+    </g>
+    <path id="icon" d="M654,1648.927a5.943,5.943,0,0,0-11-3.09,5.929,5.929,0,1,0-8.962,7.544l8.421,8.384a.769.769,0,0,0,1.085,0l8.42-8.384A5.883,5.883,0,0,0,654,1648.927Z" fill="#fff"/>
+  </g>
+</svg>
