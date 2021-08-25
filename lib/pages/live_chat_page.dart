@@ -175,7 +175,7 @@ class LiveChatPage extends StatelessWidget {
                           ],
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
                 SizedBox(

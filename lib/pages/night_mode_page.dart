@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/pages/live_chat_page.dart';
+import 'package:la_isla/pages/payment_page.dart';
 import 'package:la_isla/theme/colors.dart';
 import 'package:la_isla/widgets/shared/app-drawer.dart';
 import 'package:la_isla/widgets/shared/app_bar.dart';
@@ -1123,23 +1124,26 @@ class NightModePage extends StatelessWidget {
                             SizedBox(
                               width: 20,
                             ),
-                            Container(
-                              margin: EdgeInsets.only(bottom: 10),
-                              height: 50,
-                              width: 120,
-                              decoration: BoxDecoration(
-                                color: AppColors.white,
-                                borderRadius: BorderRadius.all(
-                                  Radius.circular(15),
+                            GestureDetector(
+                              onTap: () => Get.to(() => PaymentPage()),
+                              child: Container(
+                                margin: EdgeInsets.only(bottom: 10),
+                                height: 50,
+                                width: 120,
+                                decoration: BoxDecoration(
+                                  color: AppColors.white,
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(15),
+                                  ),
                                 ),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Buy',
-                                  style: TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.normal,
-                                      color: AppColors.black),
+                                child: Center(
+                                  child: Text(
+                                    'Buy',
+                                    style: TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.normal,
+                                        color: AppColors.black),
+                                  ),
                                 ),
                               ),
                             )
@@ -1407,9 +1411,8 @@ class NightModePage extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () => Get.to(LiveChatPage()),
+                onTap: () => Get.to(() => LiveChatPage()),
                 child: Container(
-                  padding: EdgeInsets.only(top: 30.0),
                   decoration: BoxDecoration(
                     color: AppColors.black,
                     boxShadow: [
@@ -1430,7 +1433,107 @@ class NightModePage extends StatelessWidget {
                   ),
                   height: MediaQuery.of(context).size.height * 0.25,
                   width: MediaQuery.of(context).size.width * 0.93,
-                  child: Container(),
+                  child: Container(
+                    alignment: Alignment.topLeft,
+                    child: Stack(
+                      children: [
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Container(
+                            padding: EdgeInsets.all(20),
+                            height: 90,
+                            width: 90,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: AppColors.primaryPink.withOpacity(0.2),
+                                border: Border.all(
+                                    color:
+                                        AppColors.primaryPink.withOpacity(0.2),
+                                    width: 2)),
+                            child: Container(
+                              padding: EdgeInsets.all(10),
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AppColors.primaryPink.withOpacity(0.2),
+                                  border: Border.all(
+                                      color: AppColors.primaryPink, width: 2)),
+                              child: Container(
+                                height: 30,
+                                width: 30,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  image: DecorationImage(
+                                    image: AssetImage(DJ1),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: Container(
+                            margin: EdgeInsets.only(
+                                left: MediaQuery.of(context).size.width * 0.2),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.only(top: 30),
+                                  child: Text(
+                                    'MadMike808',
+                                    style: TextStyle(
+                                        color: AppColors.white,
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ),
+                                Container(
+                                  margin: EdgeInsets.only(
+                                      top: MediaQuery.of(context).size.height *
+                                          0.079),
+                                  child: Row(
+                                    children: [
+                                      Container(
+                                        padding: EdgeInsets.all(5),
+                                        height: 20,
+                                        width: 20,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: AppColors.primaryPink
+                                              .withOpacity(0.4),
+                                        ),
+                                        child: Center(
+                                          child: Container(
+                                            height: 5,
+                                            width: 5,
+                                            color: AppColors.primaryPink,
+                                          ),
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 1,
+                                      ),
+                                      Container(
+                                        child: Text(
+                                          'Live',
+                                          style: TextStyle(
+                                              color: AppColors.primaryPink,
+                                              fontSize: 12),
+                                        ),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Container(

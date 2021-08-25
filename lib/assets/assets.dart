@@ -51,6 +51,13 @@ const String LOVE_ICN = PNG_PATH + 'love_icn.png';
 const String PROFILE_BG = PNG_PATH + 'profile_bg_img.png';
 const String GRID_ICN = PNG_PATH + 'grid_icn.png';
 const String DISCOUNT_ICN = PNG_PATH + 'discount_icn.png';
+const String CARD_IMG = PNG_PATH + 'card_img.png';
+const String CREDIT_CARD_ICN = PNG_PATH + 'credit_card_img.png';
+const String GOOGLE_WALLET_ICN = PNG_PATH + 'google_wallet_img.png';
+const String PHONE_PE_ICN = PNG_PATH + 'phone_pe_img.png';
+const String NET_BANKING_ICN = PNG_PATH + 'net_banking_img.png';
+const String OTHER_WALLET_ICN = PNG_PATH + 'other_wallet_img.png';
+const String PAYMENT_PATTERN_IMG = PNG_PATH + 'payment_bg_pattern.png';
 
 ////Icons SVG
 const String SVG_PATH = 'lib/assets/icons/';

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="427" height="291" viewBox="0 0 427 291">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.25" y1="1.223" x2="-0.25" y2="-0.223" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fc5b44"/>
+      <stop offset="0.342" stop-color="#fdd16f"/>
+      <stop offset="1" stop-color="#ff5400"/>
+    </linearGradient>
+    <filter id="Shape_18" x="0" y="0" width="427" height="291" filterUnits="userSpaceOnUse">
+      <feOffset dy="9" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="11" result="blur"/>
+      <feFlood flood-opacity="0.122"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Card" transform="translate(-81 -53)">
+    <g transform="matrix(1, 0, 0, 1, 81, 53)" filter="url(#Shape_18)">
+      <rect id="Shape_18-2" data-name="Shape 18" width="361" height="225" rx="29" transform="translate(33 24)" fill="url(#linear-gradient)"/>
+    </g>
+    <circle id="Shape_17" data-name="Shape 17" cx="16.99" cy="16.99" r="16.99" transform="translate(415.53 239.73)" fill="rgba(255,255,255,0.5)"/>
+    <circle id="Shape" cx="16.99" cy="16.99" r="16.99" transform="translate(392.87 239.73)" fill="#fff"/>
+    <path id="Shape-2" data-name="Shape" d="M428.99,195.61a2,2,0,0,1-2-2v-1.66a2,2,0,0,1,2-2h1.66a2,2,0,0,1,2,2v1.66a2,2,0,0,1-2,2Zm-12.74,0a2,2,0,0,1-2-2v-1.66a2,2,0,0,1,2-2h1.66a2,2,0,0,1,2,2v1.66a2,2,0,0,1-2,2Zm-12.74,0a2,2,0,0,1-2-2v-1.66a2,2,0,0,1,2-2h1.66a2,2,0,0,1,2,2v1.66a2,2,0,0,1-2,2Zm-12.749,0a2,2,0,0,1-2-2v-1.66a2,2,0,0,1,2-2h1.66a2,2,0,0,1,2,2v1.66a2,2,0,0,1-2,2Z" fill="#fff"/>
+    <g id="Shape-3" data-name="Shape">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="17" cy="17" r="17" transform="translate(148 100)" fill="#fee7e7" opacity="0.702"/>
+      <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="17" cy="17" r="17" transform="translate(171 100)" fill="#ff9800" opacity="0.702"/>
+      <path id="Shape_17-2" data-name="Shape 17" d="M143.1,302A29.12,29.12,0,0,1,114,272.86V118.943c35.357,6.272,76.89,20.269,107.8,50.762,65.815,64.918,86.444,85.573,182.711,79.672,27.733-1.7,50.882-.205,70.487,3.97V272.86A29.12,29.12,0,0,1,445.9,302Zm190.688-76.366c-53.046-3.088-50.1-39.207-66.8-111.541-3.667-15.885-8.614-27.94-14.1-37.091H445.9A29.121,29.121,0,0,1,475,106.141v81.8c-37.184,4.132-92.748,37.83-136.547,37.829Q336.1,225.766,333.788,225.633Z" fill="#fff" opacity="0.051"/>
+    </g>
+  </g>
+</svg>

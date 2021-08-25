@@ -13,13 +13,15 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final gradientBg = Container(
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: <Color>[
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: <Color>[
             AppColors.gradient1,
             AppColors.gradient2,
-          ])),
+          ],
+        ),
+      ),
     );
 
     final noGradientBg = Container(

@@ -54,7 +54,7 @@ class ChatPage extends StatelessWidget {
                     child: Row(
                       children: [
                         GestureDetector(
-                          onTap: () => Get.to(() => ChatRoomPage()),
+                          onTap: () => Get.back(),
                           child: Container(
                               padding: EdgeInsets.only(left: 20),
                               child: ImageIcon(
