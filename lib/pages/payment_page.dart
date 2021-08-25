@@ -70,7 +70,7 @@ class PaymentPage extends StatelessWidget {
                             Text(
                               'Credit Card / Debit',
                               style: TextStyle(
-                                  fontSize: 20, color: AppColors.black),
+                                  fontSize: 16, color: AppColors.black),
                             )
                           ],
                         ),
@@ -99,7 +99,7 @@ class PaymentPage extends StatelessWidget {
                             Text(
                               'Net Banking',
                               style: TextStyle(
-                                  fontSize: 20, color: AppColors.black),
+                                  fontSize: 16, color: AppColors.black),
                             )
                           ],
                         ),
@@ -128,7 +128,7 @@ class PaymentPage extends StatelessWidget {
                             Text(
                               'Google Wallet',
                               style: TextStyle(
-                                  fontSize: 20, color: AppColors.black),
+                                  fontSize: 16, color: AppColors.black),
                             )
                           ],
                         ),
@@ -157,7 +157,7 @@ class PaymentPage extends StatelessWidget {
                             Text(
                               'PhonePe',
                               style: TextStyle(
-                                  fontSize: 20, color: AppColors.black),
+                                  fontSize: 16, color: AppColors.black),
                             )
                           ],
                         ),
@@ -186,7 +186,7 @@ class PaymentPage extends StatelessWidget {
                             Text(
                               'Other Wallets',
                               style: TextStyle(
-                                  fontSize: 20, color: AppColors.black),
+                                  fontSize: 16, color: AppColors.black),
                             )
                           ],
                         ),
@@ -214,7 +214,7 @@ class PaymentPage extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   color: AppColors.black.withOpacity(0.7),
-                  fontSize: 18,
+                  fontSize: 14,
                 ),
               ),
             ),
@@ -226,7 +226,7 @@ class PaymentPage extends StatelessWidget {
                 children: [
                   Container(
                     height: MediaQuery.of(context).size.height * 0.4,
-                    width: 70,
+                    width: 90,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                       color: AppColors.white,
@@ -245,11 +245,11 @@ class PaymentPage extends StatelessWidget {
                     )),
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.133,
+                    width: MediaQuery.of(context).size.width * 0.05,
                   ),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.4,
-                    width: 235,
+                    width: MediaQuery.of(context).size.width * 0.605,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(40),
@@ -266,7 +266,7 @@ class PaymentPage extends StatelessWidget {
                             '325 535 361 ***',
                             style: TextStyle(
                                 color: AppColors.white,
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -275,13 +275,13 @@ class PaymentPage extends StatelessWidget {
                         ),
                         Container(
                           padding: EdgeInsets.only(
-                            left: 20,
+                            left: 10,
                           ),
                           child: Text(
                             'Michael Nordic',
                             style: TextStyle(
                                 color: AppColors.white,
-                                fontSize: 24,
+                                fontSize: 20,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),

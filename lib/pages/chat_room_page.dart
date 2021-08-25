@@ -112,9 +112,6 @@ class ChatRoomPage extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              SizedBox(
-                                width: 20,
-                              ),
                               Container(
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -217,9 +214,6 @@ class ChatRoomPage extends StatelessWidget {
                                 ],
                               ),
                             ),
-                            SizedBox(
-                              width: 20,
-                            ),
                             Container(
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -319,9 +313,6 @@ class ChatRoomPage extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                            ),
-                            SizedBox(
-                              width: 20,
                             ),
                             Container(
                               child: Column(
