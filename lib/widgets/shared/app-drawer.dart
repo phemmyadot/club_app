@@ -7,6 +7,7 @@ import 'package:la_isla/pages/event_details_page.dart';
 import 'package:la_isla/pages/home_page.dart';
 import 'package:la_isla/pages/login_page.dart';
 import 'package:la_isla/pages/night_mode_page.dart';
+import 'package:la_isla/pages/profile_page.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class CustomAppDrawer extends StatelessWidget {
@@ -242,26 +243,29 @@ class CustomAppDrawer extends StatelessWidget {
                   ],
                 ),
               ),
-              Container(
-                padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
-                child: Row(
-                  children: [
-                    Image.asset(
-                      ACCOUNT_MENU_ICN,
-                      color: AppColors.secondaryPink,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'My account',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: AppColors.white,
-                        fontSize: 18,
+              GestureDetector(
+                onTap: () => Get.to(() => ProfilePage()),
+                child: Container(
+                  padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
+                  child: Row(
+                    children: [
+                      Image.asset(
+                        ACCOUNT_MENU_ICN,
+                        color: AppColors.secondaryPink,
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        'My account',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: AppColors.white,
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(
