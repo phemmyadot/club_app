@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
+import 'package:la_isla/controllers/entry_controller.dart';
 import 'package:la_isla/pages/night_mode_page.dart';
 
 class CustomFloatingButton extends StatelessWidget {
@@ -8,6 +9,8 @@ class CustomFloatingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final EntryController entryPageController =
+        Get.put(EntryController(), permanent: false);
     return Padding(
       padding: EdgeInsets.only(top: 10),
       child: Container(
@@ -16,7 +19,7 @@ class CustomFloatingButton extends StatelessWidget {
         child: FloatingActionButton(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          onPressed: () => Get.to(() => NightModePage()),
+          onPressed: () => entryPageController.changeTabIndex(2),
           child: Container(
             height: 70,
             width: 70,

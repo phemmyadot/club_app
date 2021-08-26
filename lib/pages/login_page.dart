@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/controllers/auth_controller.dart';
 import 'package:la_isla/enums/enums.dart';
+import 'package:la_isla/pages/entry_page.dart';
 import 'package:la_isla/pages/home_page.dart';
 import 'package:la_isla/pages/forgot_password_page.dart';
 import 'package:la_isla/pages/signup_page.dart';
@@ -76,18 +77,20 @@ class LoginPage extends StatelessWidget {
                                           onTap: () =>
                                               Get.to(() => ForgotPassword())),
                                       Buttons(
-                                          type: ButtonType.text,
-                                          color: AppColors.white,
-                                          height: 48,
-                                          radius: 24,
-                                          padding: 12,
-                                          textStyle: AppTextStyles.semiBold16
-                                              .copyWith(color: AppColors.black),
-                                          width: double.infinity,
-                                          text: Strings.login,
-                                          iconColor: AppColors.white,
-                                          onTap: () =>
-                                              Get.to(() => HomePage())),
+                                        type: ButtonType.text,
+                                        color: AppColors.white,
+                                        height: 48,
+                                        radius: 24,
+                                        padding: 12,
+                                        textStyle: AppTextStyles.semiBold16
+                                            .copyWith(color: AppColors.black),
+                                        width: double.infinity,
+                                        text: Strings.login,
+                                        iconColor: AppColors.white,
+                                        onTap: () => Get.to(
+                                          () => EntryPage(),
+                                        ),
+                                      ),
                                       SizedBox(height: 24),
                                       Image.asset(OR_ICON, height: 36),
                                       SizedBox(height: 24),

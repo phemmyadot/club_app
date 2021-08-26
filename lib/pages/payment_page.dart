@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
+import 'package:la_isla/controllers/entry_controller.dart';
 import 'package:la_isla/pages/home_page.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class PaymentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final EntryController entryPageController =
+        Get.put(EntryController(), permanent: false);
+
     return Scaffold(
       body: Container(
         height: MediaQuery.of(context).size.height,
@@ -338,7 +342,7 @@ class PaymentPage extends StatelessWidget {
                     ),
                     SizedBox(width: MediaQuery.of(context).size.width * 0.38),
                     GestureDetector(
-                      onTap: () => Get.to(() => HomePage()),
+                      onTap: () => entryPageController.changeTabIndex(0),
                       child: Container(
                         height: 40,
                         width: 100,
