@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/controllers/entry_controller.dart';
 import 'package:la_isla/pages/live_chat_page.dart';
+import 'package:la_isla/pages/payment_page.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class NightModePage extends StatelessWidget {
@@ -1127,7 +1128,7 @@ class NightModePage extends StatelessWidget {
                               width: 20,
                             ),
                             GestureDetector(
-                              onTap: () => buyAction(entryPageController),
+                              onTap: () => Get.to(() => PaymentPage()),
                               child: Container(
                                 margin: EdgeInsets.only(bottom: 10),
                                 height: 50,

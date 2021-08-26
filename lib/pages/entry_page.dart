@@ -102,9 +102,10 @@ class EntryPage extends StatelessWidget {
             : AppColors.black,
         drawer: CustomAppDrawer(),
         appBar: PreferredSize(
-          preferredSize: entryPageController.tabIndex.value == 6
-              ? Size.fromHeight(MediaQuery.of(context).size.height * 0)
-              : Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
+          preferredSize: entryPageController.tabIndex.value == 5 ||
+                  entryPageController.tabIndex.value == 3
+              ? Size.fromHeight(MediaQuery.of(context).size.height * 0.23)
+              : Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
           child: CustomAppBar(
             showGradient: entryPageController.tabIndex.value == 5 ||
                     entryPageController.tabIndex.value == 3

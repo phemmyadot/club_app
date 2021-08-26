@@ -100,8 +100,7 @@ class CustomAppBar extends StatelessWidget {
                 indicatorWeight: 2.5,
               )
             : Container(),
-        preferredSize:
-            Size.fromHeight(MediaQuery.of(context).size.height * 0.27),
+        preferredSize: Size.fromHeight(MediaQuery.of(context).size.height * 0),
       ),
       title: Container(
         alignment: Alignment.center,
