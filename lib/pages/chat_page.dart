@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/controllers/entry_controller.dart';
+import 'package:la_isla/controllers/tab_controller.dart';
 import 'package:la_isla/theme/colors.dart';
 import 'package:la_isla/theme/text_styles.dart';
 import 'package:la_isla/widgets/form/text_field.dart';
@@ -13,6 +14,9 @@ class ChatPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final EntryController entryPageController =
         Get.put(EntryController(), permanent: false);
+
+    final ChatTabController _tabx =
+        Get.put(ChatTabController(), permanent: false);
 
     headSection(hearderTitle) {
       return Align(
@@ -294,10 +298,10 @@ class ChatPage extends StatelessWidget {
             fit: BoxFit.scaleDown,
           )),
     );
-
     return DefaultTabController(
       length: 3,
       child: TabBarView(
+        controller: _tabx.chatController,
         children: [
           Stack(
             children: [

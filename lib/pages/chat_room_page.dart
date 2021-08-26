@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
+import 'package:la_isla/controllers/chatroom_controller.dart';
 import 'package:la_isla/controllers/entry_controller.dart';
 import 'package:la_isla/theme/colors.dart';
 
@@ -11,6 +12,8 @@ class ChatRoomPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final EntryController entryPageController =
         Get.put(EntryController(), permanent: false);
+    final ChatRoomTabController _tabx =
+        Get.put(ChatRoomTabController(), permanent: false);
 
     chatCard(title, message, time, messageCount) {
       return GestureDetector(
@@ -118,6 +121,7 @@ class ChatRoomPage extends StatelessWidget {
     return DefaultTabController(
       length: 3,
       child: TabBarView(
+        controller: _tabx.chatRoomController,
         children: [
           Container(
             child: SingleChildScrollView(

@@ -89,46 +89,6 @@ class EntryPage extends StatelessWidget {
     );
   }
 
-  final chatRoomTabBar = const TabBar(
-    indicatorColor: Color(0xFFFCFCFC),
-    indicatorPadding: EdgeInsets.only(bottom: 5),
-    indicatorWeight: 2.5,
-    tabs: [
-      Tab(
-        icon: ImageIcon(AssetImage(CHAT_ICN)),
-      ),
-      Tab(
-        icon: ImageIcon(AssetImage(GROUP_ICN)),
-      ),
-      Tab(
-        icon: ImageIcon(AssetImage(FAVOURITE_ICN)),
-      ),
-    ],
-  );
-
-  final chatTabBar = TabBar(
-    indicatorColor: Color(0xFFFCFCFC),
-    indicatorPadding: EdgeInsets.only(bottom: 5),
-    indicatorWeight: 2.5,
-    tabs: [
-      Tab(
-        icon: ImageIcon(
-          AssetImage(CHAT_ICN),
-        ),
-        text: 'Public rooms',
-      ),
-      Tab(
-        icon: ImageIcon(AssetImage(CHAT_ICN)),
-        text: 'Private rooms',
-      ),
-      Tab(
-        icon: ImageIcon(AssetImage(CHAT_ICN)),
-        text: 'Contacts',
-      ),
-    ],
-  );
-  final tabView = Container();
-
   @override
   Widget build(BuildContext context) {
     final EntryController entryPageController =
@@ -144,13 +104,16 @@ class EntryPage extends StatelessWidget {
         appBar: PreferredSize(
           preferredSize: entryPageController.tabIndex.value == 6
               ? Size.fromHeight(MediaQuery.of(context).size.height * 0)
-              : Size.fromHeight(MediaQuery.of(context).size.height * 0.1),
+              : Size.fromHeight(MediaQuery.of(context).size.height * 0.15),
           child: CustomAppBar(
             showGradient: entryPageController.tabIndex.value == 5 ||
                     entryPageController.tabIndex.value == 3
                 ? true
                 : false,
-            tabView: tabView,
+            showTabView: entryPageController.tabIndex.value == 3 ||
+                    entryPageController.tabIndex.value == 5
+                ? true
+                : false,
           ),
         ),
         bottomNavigationBar: entryPageController.tabIndex.value == 5 ||
