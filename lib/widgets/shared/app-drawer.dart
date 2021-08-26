@@ -2,19 +2,22 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
-import 'package:la_isla/pages/chat_room_page.dart';
-import 'package:la_isla/pages/event_details_page.dart';
-import 'package:la_isla/pages/home_page.dart';
+import 'package:la_isla/controllers/entry_controller.dart';
 import 'package:la_isla/pages/login_page.dart';
-import 'package:la_isla/pages/night_mode_page.dart';
-import 'package:la_isla/pages/profile_page.dart';
 import 'package:la_isla/theme/colors.dart';
 
 class CustomAppDrawer extends StatelessWidget {
   const CustomAppDrawer({Key? key}) : super(key: key);
 
+  navigate(index, controller) {
+    Get.back();
+    controller.changeTabIndex(index);
+  }
+
   @override
   Widget build(BuildContext context) {
+    final EntryController entryPageController =
+        Get.put(EntryController(), permanent: false);
     return Container(
       width: double.infinity,
       height: MediaQuery.of(context).size.height,
@@ -77,7 +80,7 @@ class CustomAppDrawer extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
                 child: InkWell(
-                  onTap: () => Get.to(() => HomePage()),
+                  onTap: () => navigate(0, entryPageController),
                   child: Row(
                     children: [
                       Image.asset(
@@ -102,7 +105,7 @@ class CustomAppDrawer extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
                 child: InkWell(
-                  onTap: () => Get.to(() => NightModePage()),
+                  onTap: () => navigate(2, entryPageController),
                   child: Row(
                     children: [
                       Image.asset(
@@ -128,7 +131,7 @@ class CustomAppDrawer extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
                 child: InkWell(
-                  onTap: () => Get.to(() => EventDetailsPage()),
+                  onTap: () => navigate(1, entryPageController),
                   child: Row(
                     children: [
                       Image.asset(
@@ -153,9 +156,7 @@ class CustomAppDrawer extends StatelessWidget {
               Container(
                 padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
                 child: InkWell(
-                  onTap: () => Get.to(
-                    () => ChatRoomPage(),
-                  ),
+                  onTap: () => navigate(3, entryPageController),
                   child: Row(
                     children: [
                       Image.asset(
@@ -244,7 +245,7 @@ class CustomAppDrawer extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () => Get.to(() => ProfilePage()),
+                onTap: () => navigate(4, entryPageController),
                 child: Container(
                   padding: EdgeInsets.only(left: 40.0, bottom: 25.0),
                   child: Row(

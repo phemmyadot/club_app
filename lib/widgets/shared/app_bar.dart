@@ -26,14 +26,17 @@ class CustomAppBar extends StatelessWidget {
 
     final noGradientBg = Container(
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: <Color>[
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: <Color>[
             AppColors.black,
             AppColors.black,
-          ])),
+          ],
+        ),
+      ),
     );
+
     return AppBar(
       toolbarHeight: 80.0,
       automaticallyImplyLeading: false,

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:la_isla/assets/assets.dart';
 import 'package:la_isla/controllers/entry_controller.dart';
-import 'package:la_isla/pages/night_mode_page.dart';
 
 class CustomFloatingButton extends StatelessWidget {
   const CustomFloatingButton({Key? key}) : super(key: key);

@@ -89,7 +89,24 @@ class EntryPage extends StatelessWidget {
     );
   }
 
-  final tabBar = const TabBar(
+  final chatRoomTabBar = const TabBar(
+    indicatorColor: Color(0xFFFCFCFC),
+    indicatorPadding: EdgeInsets.only(bottom: 5),
+    indicatorWeight: 2.5,
+    tabs: [
+      Tab(
+        icon: ImageIcon(AssetImage(CHAT_ICN)),
+      ),
+      Tab(
+        icon: ImageIcon(AssetImage(GROUP_ICN)),
+      ),
+      Tab(
+        icon: ImageIcon(AssetImage(FAVOURITE_ICN)),
+      ),
+    ],
+  );
+
+  final chatTabBar = TabBar(
     indicatorColor: Color(0xFFFCFCFC),
     indicatorPadding: EdgeInsets.only(bottom: 5),
     indicatorWeight: 2.5,
@@ -116,8 +133,6 @@ class EntryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final EntryController entryPageController =
         Get.put(EntryController(), permanent: false);
-
-    print(entryPageController.tabIndex.value);
 
     return Obx(
       () => Scaffold(
