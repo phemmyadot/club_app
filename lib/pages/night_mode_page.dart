@@ -17,10 +17,15 @@ import 'package:la_isla/widgets/shared/app_floating-button.dart';
 class NightModePage extends StatelessWidget {
   const NightModePage({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
+  buyAction() {
+    Get.back();
     final EntryController entryPageController =
         Get.put(EntryController(), permanent: false);
+    entryPageController.changeTabIndex(6);
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final tabView = Container();
 
     void openCatalogBottomSheet() {
@@ -1128,8 +1133,7 @@ class NightModePage extends StatelessWidget {
                               width: 20,
                             ),
                             GestureDetector(
-                              onTap: () =>
-                                  entryPageController.changeTabIndex(6),
+                              onTap: () => buyAction(),
                               child: Container(
                                 margin: EdgeInsets.only(bottom: 10),
                                 height: 50,
